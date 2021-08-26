@@ -1,11 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import ToDoContainer from "./Components/ToDoContainer/ToDoContainer"
-import "./App.css"
+import ToDoContainer from "./functionBased/Components/ToDoContainer/ToDoContainer"
+import "./functionBased/App.css"
+/* import {BrowserRouter as Router} from "react-router-dom"; */
 ReactDOM.render(
     <React.StrictMode>
 
-        <ToDoContainer />
+        {/* <Router> */}
+            <ToDoContainer />
+        {/* </ Router > */}
 
     </React.StrictMode>,
     

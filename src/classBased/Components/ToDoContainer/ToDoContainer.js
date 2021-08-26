@@ -68,8 +68,13 @@ class ToDoContainer extends React.Component {
 
   } */
   componentDidUpdate(prevProps, prevState){
+     // arrays können nicht direkt miteinander verglichen werden
+    // => if(previousState.todos !== this.state.todos) wäre IMMER true
+    // Stattdessen: Arrays ins String umwandeln 
     if(prevState.todos!==this.state.todos){
       const temp=JSON.stringify(this.state.todos);
+       // Hier ist es sinnvoll, die neuen Daten/State in einer Datenbank zu speichern
+      // in unserem Fall in localStorage
       localStorage.setItem("todos",temp)
     }
   }
@@ -88,6 +93,7 @@ class ToDoContainer extends React.Component {
 
   render() {
     return (
+      
       <React.Fragment>
         <div className="container">
           <div className="inner">
@@ -102,7 +108,9 @@ class ToDoContainer extends React.Component {
             />
           </div>
         </div>
+       
       </React.Fragment>
+
     );
   }
 }

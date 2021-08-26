@@ -1,9 +1,10 @@
 
-import React, {Component} from "react";
+import React, {Component,useState} from "react";
 //style
 import "./ToDoInput.css"
 
-class ToDoInput extends Component{
+class
+ ToDoInput extends Component{
     state={
         title:""
     };
@@ -27,7 +28,6 @@ class ToDoInput extends Component{
              alert("Please write a task")
          }
         
-
     }
 
     render(){
@@ -53,8 +53,6 @@ class ToDoInput extends Component{
 
 
             </form>
-            
-
         )
 
     }
@@ -63,3 +61,13 @@ class ToDoInput extends Component{
 }
 
 export default ToDoInput;
+
+
+
+    
+
+  
+
+  
+
+  
